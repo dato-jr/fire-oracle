@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "pyro"
+version = "0.1.0"
+description = ""
+authors = ["Nite Toad <dtorresjr1106@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11, <3.14"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
