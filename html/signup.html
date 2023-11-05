@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="..\css\signup.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="news.html">News</a>
+        <a href="map.html">Common Wildfires</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+
+    <main>
+        <form action="login.html" method="post">
+            <div>
+                <label for="email1">Email: </label>
+            <input type="email" name="email1" id="email1"><span>*</span>
+            </div>
+            <div>
+                <label for="email2">Confirm Email:</label>
+                <input type="email" name="email2" id="email2"><span>*</span>
+            </div>
+
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password"><span>*</span>
+            </div>
+
+            
+            <label>&nbsp;</label>
+            <input type="button" id="join" value="Register">
+            <input type="button" id="clear_form" value="Reset">
+        </form>
+    </main>
+
+    <a id="login_link" href="login.html">Have an account already?</a>
+    
+    <script src="..\js\signup.js"></script>
+</body>
+
+</html>
