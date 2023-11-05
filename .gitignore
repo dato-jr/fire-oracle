@@ -1,2 +1,6 @@
 # ignoring data files
 python/data/
+
+# ignoring models
+python/models/
+
