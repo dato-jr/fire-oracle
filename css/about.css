@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+}
+
+.nav-outter {
+    background-color: #88665D;
+    width: auto;
+    height: 30px;
+    text-align: center;
+};

@@ -1,0 +1,13 @@
+.nav-outter {
+    background-color: #88665D;
+    width: auto;
+    height: 30px;
+    text-align: end;
+};
+
+.nav-outter .nav {
+    text-align: left;
+    background-color: #88665D;
+    width: 100%;
+    height: 10px;
+};
