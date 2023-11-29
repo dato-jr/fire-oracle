@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="..\css\home.css">
+    <title>News</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/about.css">
 </head>
 
 <body>
+
     <nav class="nav">
-        <a href="home.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="news.html">News</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="settings.html">Settings</a>
-        <a href="map.html">Common Wildfires</a>
+        <div class="navbar-container">
+            <ul>
+                <li> <a href="home.html">Home</a> </li>
+                <li> <a href="about.html">About Us</a> </li>
+                <li> <a href="news.html">News</a> </li>
+            </ul>
+            <ul class="navbar-middle">
+                <li> <a href="interactive_map.html">Fire Oracle</a> </li>
+            </ul>
+            <ul>
+                <li> <a href="login.html">Login</a> </li>
+                <li> <a href="signup.html">Sign Up</a> </li>
+                <!-- <li> <a href="settings.html">Settings</a> </li> -->
+            </ul>
+        </div>
     </nav>
-    <br>
+    <div class="after-navbar"></div>
+
     <main>
-        <iframe width="900" height="1600" src="https://rss.app/embed/v1/wall/pX3jK2RpvBrnN053" frameborder="1"></iframe>
+        <iframe src="https://rss.app/embed/v1/wall/GTJ4mZHTn6ue11EU" frameborder="0"></iframe>
+        <footer style="text-align: center;">
+            <a href="https://www.bbc.com/news/topics/ce2gz9mdde3t">For more news follow this link!</a>
+        </footer>
     </main>
-    <br>
-    <footer>
-        <a href="https://www.bbc.com/news/topics/ce2gz9mdde3t">For more news follow this link!</a>
-    </footer>
+
 </body>
 
 </html>

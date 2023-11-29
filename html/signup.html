@@ -5,47 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
-    <link rel="stylesheet" href="..\css\signup.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/form.css">
 </head>
 
 <body>
-
+    <!-- <div id="navbar"></div> -->
     <nav class="nav">
-        <a href="home.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="news.html">News</a>
-        <a href="map.html">Common Wildfires</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="settings.html">Settings</a>
+        <div class="navbar-container">
+            <ul>
+                <li> <a href="home.html">Home</a> </li>
+                <li> <a href="about.html">About Us</a> </li>
+                <li> <a href="news.html">News</a> </li>
+            </ul>
+            <ul class="navbar-middle">
+                <li> <a href="interactive_map.html">Fire Oracle</a> </li>
+            </ul>
+            <ul>
+                <li> <a href="login.html">Login</a> </li>
+                <li> <a href="signup.html">Sign Up</a> </li>
+                <!-- <li> <a href="settings.html">Settings</a> </li> -->
+            </ul>
+        </div>
     </nav>
+    <div class="after-navbar"></div>
 
-    <main>
-        <form action="login.html" method="post">
-            <div>
-                <label for="email1">Email: </label>
-            <input type="email" name="email1" id="email1"><span>*</span>
-            </div>
-            <div>
-                <label for="email2">Confirm Email:</label>
-                <input type="email" name="email2" id="email2"><span>*</span>
-            </div>
+    <main class="form-container">
+        <form class="form-content" action="login.html" method="post">
 
-            <div>
-                <label for="password">Password: </label>
-                <input type="password" name="password" id="password"><span>*</span>
+            <div class="input-group">
+                    <label for="email1">Email: </label>
+                    <input type="email" name="email1" id="email1" autofocus>
+                <span>*</span>
             </div>
 
-            
-            <label>&nbsp;</label>
-            <input type="button" id="join" value="Register">
-            <input type="button" id="clear_form" value="Reset">
+            <div class="input-group">
+                    <label for="email2">Confirm Email: </label>
+                    <input type="email" name="email2" id="email2">
+                <span>*</span>
+            </div>
+
+            <div class="input-group">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" placeholder="At least 8 characters">
+                <span>*</span>
+            </div>
+
+            <div class="button-container">
+                <input type="submit" id="submit" name="submit" value="Submit">
+                <input type="reset" id="reset" name="reset" value="Reset">
+            </div>
         </form>
-    </main>
 
-    <a id="login_link" href="login.html">Have an account already?</a>
-    
-    <script src="..\js\signup.js"></script>
+    </main>
+    <a id="links" href="login.html">Have an account already? Login here!</a>
+
+    <!-- <script src="..\js\load-navbar.js"></script> -->
+    <script src="../../../jquery-3.7.1.js"></script>
+    <script src="../js/signup.js"></script>
 </body>
 
 </html>

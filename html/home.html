@@ -5,36 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="..\css\home.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
-    <div class="nav-outter">
-        <nav class="nav">
-            <a href="home.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="news.html">News</a>
-            <a href="login.html">Login</a>
-            <a href="signup.html">Sign Up</a>
-            <a href="settings.html">Settings</a>
-        </nav>
-        <a href="map.html">Common Wildfires</a>
-    </div>
-    <p>Welcome to Common Wildfires, if you would like to see the map of predicted wildfires click on Common Wildfires
-        right above. Otherwise, enjoy these vides below on how to stop and protect yourself from wildfires.</p>
-    <div>
+    <!-- <nav id="navbar"></nav> -->
+    <nav class="nav">
+        <div class="navbar-container">
+            <ul>
+                <li> <a href="home.html">Home</a> </li>
+                <li> <a href="about.html">About Us</a> </li>
+                <li> <a href="news.html">News</a> </li>
+            </ul>
+            <ul class="navbar-middle">
+                <li> <a href="interactive_map.html">Fire Oracle</a> </li>
+            </ul>
+            <ul>
+                <li> <a href="login.html">Login</a> </li>
+                <li> <a href="signup.html">Sign Up</a> </li>
+                <!-- <li> <a href="settings.html">Settings</a> </li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="after-navbar"></div>
+
+    <h1 id="header">Welcome to Fire Oracle</h1>
+    <p id="message">If you would like to see the map of predicted wildfires click on Fire Oracle
+        on the navigation bar. Otherwise, enjoy these videos below on how to stop and protect yourself from wildfires.
+    </p>
+    <div class="video-container">
         <ul>
             <li>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/G_0luSvEXnA?si=AhYizGUojb4OPt2v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="500" height="300" src="https://www.youtube.com/embed/G_0luSvEXnA?si=AhYizGUojb4OPt2v"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </li>
             <li>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/EodxubsO8EI?si=JYOoqJ56RjJT23Pd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="500" height="300" src="https://www.youtube.com/embed/EodxubsO8EI?si=JYOoqJ56RjJT23Pd"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </li>
             <li>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fzUUP3PWMIQ?si=jt9pZxocp5UZ35RJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="500" height="300" src="https://www.youtube.com/embed/fzUUP3PWMIQ?si=jt9pZxocp5UZ35RJ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </li>
         </ul>
     </div>
+
+    <script src="../../../jquery-3.7.1.js"></script>
+    <script src="../js/animate.js"></script>
+    <!-- <script src="..\js\load-navbar.js"></script> -->
 </body>
 
 </html>

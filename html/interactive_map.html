@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <title>Interactive Map</title>
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/map.css">
 </head>
 
 <body>
+
     <!-- <nav id="navbar"></nav> -->
+
     <nav class="nav">
         <div class="navbar-container">
             <ul>
@@ -29,7 +32,14 @@
     </nav>
     <div class="after-navbar"></div>
 
-    <h1 style="text-align: center;">A work in progress... maybe</h1>
+    <h1 id="header">Predicted Wildfires in the United States</h1>
+    <main class="map-container">
+        <iframe id="map" src="map.html"></iframe>
+
+    </main>
+
+    <script src="../../../jquery-3.7.1.js"></script>
+    <script src="../js/animate.js"></script>
     <!-- <script src="..\js\load-navbar.js"></script> -->
 </body>
 
