@@ -5,7 +5,7 @@ implementing HTML, CSS, and JavaScript.
 However, I decided to include some machine learning in python though
 it was not the main focus I was able to produce a predicted response.
 
-Now that I have the semester, I will be looking to redo my data
+Now that I have completed my semester, I will be looking to redo my data
 analysis and document more of my findings along with thoroughly
 check alternative models and hyperparameter tuninigs.
 
