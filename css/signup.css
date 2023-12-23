@@ -1,6 +1,4 @@
-/* Set background color of main to light brown */
 html {
-    /* background-color: #c7aa95; */
     height: 100%;
     width: 100%;
 }
@@ -18,7 +16,6 @@ nav {
     display: flex;
     vertical-align: top;
     background-color: #8B4513;
-    /* Set nav to spread out on top of the web browser from left to right */
     width: 100%;
     height: 5%;
     position: fixed;

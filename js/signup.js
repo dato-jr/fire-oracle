@@ -3,23 +3,52 @@ Name: Daniel Torres Jr.
 Date: 11/07/2023
 Course: Fall 2023 CIS 182 D DA
 Program: A program with a simple registration form that validates the user’s entries. Authorizing the
-user to enter the site if the entries are valid.
-- Email
-- Confirm Email
-- Password
+user to login with the with the information used to register--using the following data:
+    - Email
+    - Confirm Email
+    - Password
 Algorithm:
-- Use strict, to follow best practices in script
-- use jquery to load in document
-- define the email pattern using regular expression
-- define the password pattern using regular expression
-- add an event handler to submit the form
+    - Use strict, to follow best practices in script
+    - use jquery to load in document
+    - create a constant variable to hold the function `display_error_messages` that accepts the parameter as `messages`
+        - this function will create a new `ul` element
+        - then add the class `messages` to the `ul` element
+        - then we create a `li` element within the `ul` for every message using a for loop
+            - first create a constant variable `li` that holds the value of the created element `li`
+            - then create a constant variable `text` that holds the value of the created text node `message`
+            - add the `text` to `li`
+            - add the `li` to the `ul` 
+        - next we create a constant variable `node` to hold the value of the element with class as `.messages`
+        - If the `node` is not created then
+            - create a constant variable `form` to hold the value of the element `form`                
+            - then add the `node` to the DOM before the `form` element
+        - else just replace the node with the element `ul`
+    - next create a event handler that submits the element with the class `.form-content`
+        - create an array for the error messages
+        - create a constant variable `email1` that holds the value of the id `#email1`
+        - create a constant variable `email2` that holds the value of the id `#email2`
+        - create a constant variable `password` that holds the value of the id `password`
+        - get the value from `email1` and trim the whitespace as `email1_value`
+        - get the value from `email2` and trim the whitespace as `email2_value`
+        - get the value from `password` and trim the whitespace as `password_value`
+        - define the email pattern using regular expression
         - validate emails:
-        - get the value of the elements with the id as #email1, and #email2 and trim surrounding whitespace
-            - if everything passes clear out error message
+            - if `email1_value` or `email2_value` is empty
+                - if both are empty create error messages and add to messages array
+                - else if `email1_value` is empty create error message and add to messages array
+                - else create error message and add message to messages array 
+            - else if `email1_value` or `email2_value` matches email_format
+                - if `email1_value` does not match create error message and add to messages array
+                - else create error message and add message to messages array
+            - else if `email1_value` does not match `email2_value` create error message and add to messages array
+        - define the password pattern using regular expression
         - validate password:
-            - get the value of the element with the id as #password and trim surrounding whitespace
-            - else clear the error message
-            - prevent the submission of the form 
+            - if `password_value` is empty create error message then add to messages array
+            - else if `password_value` does match with `password_format` create error message and add to messages array
+        - if there are any error messages prevent the form from submission and display all error messages
+    - create an event handler for the button with the id as `#reset`
+        - remove the element with the clas as `.messages`
+        - focus on the element with the id as `#email1` 
             */
 "use strict";
 $(document).ready(() => {

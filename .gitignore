@@ -4,3 +4,5 @@ python/data/
 # ignoring models
 python/models/
 
+# ignoring excalidraw files 
+excalidraw/

@@ -1,6 +1,6 @@
 /*
     Name: Daniel Torres Jr.
-    Date: 11/07/2023
+    Date: 11/30/2023
     Course: Fall 2023 CIS 182 D DA
     Program: A program with a simple login form that validates the user’s entries. Authorizing the
     user to enter the site if the entries are valid.
@@ -9,21 +9,45 @@
     Algorithm:
         - Use strict, to follow best practices in script
         - use jquery to load in document
-        - define the email pattern using regular expression
-        - define the password pattern using regular expression
-        - add an event handler to submit the form
+        - create a constant variable to hold the function `display_error_messages` that accepts the parameter as `messages`
+            - this function will create a new `ul` element
+            - then add the class `messages` to the `ul` element
+            - then we create a `li` element within the `ul` for every message using a for loop
+                - first create a constant variable `li` that holds the value of the created element `li`
+                - then create a constant variable `text` that holds the value of the created text node `message`
+                - add the `text` to `li`
+                - add the `li` to the `ul` 
+            - next we create a constant variable `node` to hold the value of the element with class as `.messages`
+            - If the `node` is not created then
+                - create a constant variable `form` to hold the value of the element `form`
+                - then add the `node` to the DOM before the `form` element
+            - else just replace the node with the element `ul`
+        - next create a event handler that submits the element with the class `.form-content`
+            - create an array for the error messages
+            - create a constant variable `email` that holds the value of the id `#email`
+            - create a constant variable `password` that holds the value of the id `password`
+            - get the value from `email` and trim the whitespace
+            - get the value from `password` and trim the whitespace 
+            - define the email pattern using regular expression
             - validate email:
-                - get the value of the element with the id as #email, and trim surrounding whitespace
-                - if everything passes clear out error message
+                - Check if `email_value` is empty
+                - Check if `email_value` matches `email_format`
+                - if there is an error add create error message and add to messages array
+            - define the password pattern using regular expression
             - validate password:
-                - get the value of the element with the id as #password and trim surrounding whitespace
-                - else clear the error message
-                - prevent the submission of the form (Though I have commented out and set the even to preventDefault)
-            - hardcode a user for now to test login
-                - create an object with the email and password
-            - check if the email and password match the hardcoded user
+                - check if `password_value` is empty
+                - check if `password_value` matches `password_format`
+                - if there is an errror, create error message and add to messages array
+            - prevent the form from submitting
+            - hardcode a user to test login
+                - create an object `user` with a set email and password
+
+            - check if the email and password match the hardcoded object user
                 - if they do redirect to home page
                 - else display an error message            
+        - create an event handler for the button with the id as `#reset`
+            - remove the element with the clas as `.messages`
+            - focus on the element with the id as `#email1` 
 */
 
 "use strict";
@@ -55,18 +79,18 @@ $(document).ready(() => {
         // create array for error messages 
         const messages = [];
 
-        // get form controls to check
+        // create constant variables for email and password ids 
         const email = $("#email");
         const password = $("#password");
 
-        // get form values and trim whitespace
+        // get values and trim whitespace from email and password
         const email_value = email.val().trim();
         const password_value = password.val().trim();
 
         // email validation using regular expression
         const email_format = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
 
-        // checks if email is empty, and match regular expression
+        // checks if email is empty, and checks to match with email_format
         if (email_value === "") {
             messages[messages.length] = "Please enter an email.";
         } else if (!email_format.test(email_value)) {
@@ -76,12 +100,14 @@ $(document).ready(() => {
         // password validation using regular expression
         const password_format = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
 
+        // checks if password is empty, and checks to match with password_format
         if (password_value === "") {
             messages[messages.length] = "Please enter a password.";
         } else if (!password_format.test(password_value)) {
             messages[messages.length] = "Please enter a valid password.";
         }
 
+        // prevents the form from submitting
         event.preventDefault();
 
 
@@ -103,6 +129,8 @@ $(document).ready(() => {
         /**********************************************************************/
 
     });
+
+    // reset button, clears error messages and add focus to email input
     $("#reset").click(() => {
         $(".messages").remove();
         $("#email").focus();
