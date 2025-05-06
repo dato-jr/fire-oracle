@@ -1,7 +1,7 @@
 # Fire Oracle
 
 If you would like to pay a visit to my prototype go to:
-[Fire-Oracle Prototype](https://dato-jr.github.io.fire-oracle/html/index.html)
+[Fire-Oracle Prototype](https://dato-jr.github.io/fire-oracle/html/index.html)
 
 This was originally a class project that included to create a website
 implementing HTML, CSS, and JavaScript.
